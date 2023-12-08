@@ -38,7 +38,12 @@ function loadMilestone() {
 function openMilestone(milestoneElement){
       const currentPanel = milestoneElement.parentNode.nextElementSibling;
       console.log(currentPanel);
+      const shownPanel = document.querySelector('.show');
 
+      if(!currentPanel.classList.contains('show') && shownPanel){
+            shownPanel.classList.remove('show');
+      }
+      
       currentPanel.classList.toggle('show');
 }
 
