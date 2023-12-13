@@ -18,19 +18,32 @@
 // -----------------window.screen object end--------------
 
 // ----------------window.location start-----------------
-const href = document.getElementById('href');
-const hostname = document.getElementById('hostname');
-const pathname = document.getElementById('pathname');
-const protocol = document.getElementById('protocol');
-const port = document.getElementById('port');
+// const href = document.getElementById('href');
+// const hostname = document.getElementById('hostname');
+// const pathname = document.getElementById('pathname');
+// const protocol = document.getElementById('protocol');
+// const port = document.getElementById('port');
 
 
-href.innerText = location.href;
-hostname.innerText = location.hostname;
-pathname.innerText = location.pathname;
-protocol.innerText = location.protocol;
-port.innerText = location.port;
+// href.innerText = location.href;
+// hostname.innerText = location.hostname;
+// pathname.innerText = location.pathname;
+// protocol.innerText = location.protocol;
+// port.innerText = location.port;
 
-function newDoc() {
-    window.location.assign("https://www.w3schools.com")
+// function newDoc() {
+//     window.location.assign("https://www.w3schools.com")
+//   }
+  // ----------------window.location end-----------------
+
+  // ----------------window.history start-----------------
+
+
+  function goBack(){
+    window.history.back();
   }
+
+  function goForward() {
+    window.history.forward()
+  }
+  // ----------------window.location end-----------------
