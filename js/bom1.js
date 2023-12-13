@@ -30,3 +30,7 @@ hostname.innerText = location.hostname;
 pathname.innerText = location.pathname;
 protocol.innerText = location.protocol;
 port.innerText = location.port;
+
+function newDoc() {
+    window.location.assign("https://www.w3schools.com")
+  }
