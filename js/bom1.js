@@ -47,29 +47,56 @@
 // ----------------window.location end-----------------
 
 // ----------------js navigator start-----------------
-const appName = document.getElementById('appName')
-const appCodeName = document.getElementById('appCodeName');
-const platform = document.getElementById('platform');
-const cookieEnabled = document.getElementById('cookieEnabled');
-const product = document.getElementById('product');
-const appVersion = document.getElementById('appVersion');
-const userAgent = document.getElementById('userAgent');
-const language = document.getElementById('language');
-const online = document.getElementById('online');
-const javaEnabled = document.getElementById('javaEnabled');
+// const appName = document.getElementById('appName')
+// const appCodeName = document.getElementById('appCodeName');
+// const platform = document.getElementById('platform');
+// const cookieEnabled = document.getElementById('cookieEnabled');
+// const product = document.getElementById('product');
+// const appVersion = document.getElementById('appVersion');
+// const userAgent = document.getElementById('userAgent');
+// const language = document.getElementById('language');
+// const online = document.getElementById('online');
+// const javaEnabled = document.getElementById('javaEnabled');
 
-appName.innerHTML = navigator.appName;
-appCodeName.innerHTML = navigator.appCodeName;
-platform.innerText = navigator.platform;
-cookieEnabled.innerText = navigator.cookieEnabled;
-cookieEnabled.innerText = navigator.cookieEnabled;
-product.innerText = navigator.product;
-appVersion.innerText = navigator.appVersion;
-userAgent.innerText = navigator.userAgent;
-language.innerText = navigator.language;
-online.innerText = navigator.online;
-javaEnabled.innerText = navigator.javaEnabled;
-
-
-
+// appName.innerHTML = navigator.appName;
+// appCodeName.innerHTML = navigator.appCodeName;
+// platform.innerText = navigator.platform;
+// cookieEnabled.innerText = navigator.cookieEnabled;
+// cookieEnabled.innerText = navigator.cookieEnabled;
+// product.innerText = navigator.product;
+// appVersion.innerText = navigator.appVersion;
+// userAgent.innerText = navigator.userAgent;
+// language.innerText = navigator.language;
+// online.innerText = navigator.online;
+// javaEnabled.innerText = navigator.javaEnabled;
 // ----------------js navigator end-----------------
+
+// ----------------js popup alert start-----------------
+const confirm = document.getElementById('confirm');
+const prompt = document.getElementById('prompt');
+
+function showAlert(){
+    window.alert('hello world');
+}
+
+function showConfirm(){
+    let text;
+    const ans = window.confirm('please confirm');
+    if(ans){
+        text = 'ok';
+        confirm.innerText = text;
+    } else {
+        text = 'cancel';
+        confirm.innerText = text;
+    }
+}
+
+function showPrompt(){
+    const name = window.prompt('enter your name : ');
+    if(name){
+        prompt.innerText = 'hello ' + name;
+    } else {
+        prompt.innerText = 'no input';
+    }
+}
+// ----------------js popup alert end-----------------
