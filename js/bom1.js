@@ -156,8 +156,8 @@ function getCookie(cName) {
     return "";
 }
 
-function checkCookie(name) {
-    let username = getCookie(name);
+function checkCookie(cName) {
+    let username = getCookie(cName);
     if (username != "") {
         alert("Welcome again " + username);
     } else {
