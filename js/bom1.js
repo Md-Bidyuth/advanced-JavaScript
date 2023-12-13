@@ -72,31 +72,58 @@
 // ----------------js navigator end-----------------
 
 // ----------------js popup alert start-----------------
-const confirm = document.getElementById('confirm');
-const prompt = document.getElementById('prompt');
+// const confirm = document.getElementById('confirm');
+// const prompt = document.getElementById('prompt');
 
-function showAlert(){
-    window.alert('hello world');
-}
+// function showAlert(){
+//     window.alert('hello world');
+// }
 
-function showConfirm(){
-    let text;
-    const ans = window.confirm('please confirm');
-    if(ans){
-        text = 'ok';
-        confirm.innerText = text;
-    } else {
-        text = 'cancel';
-        confirm.innerText = text;
-    }
-}
+// function showConfirm(){
+//     let text;
+//     const ans = window.confirm('please confirm');
+//     if(ans){
+//         text = 'ok';
+//         confirm.innerText = text;
+//     } else {
+//         text = 'cancel';
+//         confirm.innerText = text;
+//     }
+// }
 
-function showPrompt(){
-    const name = window.prompt('enter your name : ');
-    if(name){
-        prompt.innerText = 'hello ' + name;
-    } else {
-        prompt.innerText = 'no input';
-    }
-}
+// function showPrompt(){
+//     const name = window.prompt('enter your name : ');
+//     if(name){
+//         prompt.innerText = 'hello ' + name;
+//     } else {
+//         prompt.innerText = 'no input';
+//     }
+// }
 // ----------------js popup alert end-----------------
+
+// ----------------js timing events start-----------------
+const timeout =  document.getElementById('timeout');
+const interval = document.getElementById('interval');
+
+let timeoutInstance;
+let intervalInstace;
+function startTimeout(){
+   timeoutInstance = setTimeout(function(){
+        timeout.innerHTML = 'hello world';
+    },3000);
+}
+
+function stopTimeout(){
+    clearTimeout(timeoutInstance);
+}
+
+function startInterval(){
+  intervalInstace = setInterval(function(){
+        interval.innerHTML = new Date().toLocaleTimeString();
+    },1000)
+}
+
+function stopInterval(){
+    clearInterval(intervalInstace);
+}
+// ----------------js timing events end-----------------
