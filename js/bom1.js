@@ -34,16 +34,42 @@
 // function newDoc() {
 //     window.location.assign("https://www.w3schools.com")
 //   }
-  // ----------------window.location end-----------------
+// ----------------window.location end-----------------
 
-  // ----------------window.history start-----------------
+// ----------------window.history start-----------------
+//   function goBack(){
+//     window.history.back();
+//   }
+
+//   function goForward() {
+//     window.history.forward()
+//   }
+// ----------------window.location end-----------------
+
+// ----------------js navigator start-----------------
+const appName = document.getElementById('appName')
+const appCodeName = document.getElementById('appCodeName');
+const platform = document.getElementById('platform');
+const cookieEnabled = document.getElementById('cookieEnabled');
+const product = document.getElementById('product');
+const appVersion = document.getElementById('appVersion');
+const userAgent = document.getElementById('userAgent');
+const language = document.getElementById('language');
+const online = document.getElementById('online');
+const javaEnabled = document.getElementById('javaEnabled');
+
+appName.innerHTML = navigator.appName;
+appCodeName.innerHTML = navigator.appCodeName;
+platform.innerText = navigator.platform;
+cookieEnabled.innerText = navigator.cookieEnabled;
+cookieEnabled.innerText = navigator.cookieEnabled;
+product.innerText = navigator.product;
+appVersion.innerText = navigator.appVersion;
+userAgent.innerText = navigator.userAgent;
+language.innerText = navigator.language;
+online.innerText = navigator.online;
+javaEnabled.innerText = navigator.javaEnabled;
 
 
-  function goBack(){
-    window.history.back();
-  }
 
-  function goForward() {
-    window.history.forward()
-  }
-  // ----------------window.location end-----------------
+// ----------------js navigator end-----------------
