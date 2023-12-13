@@ -131,10 +131,28 @@
 // ----------------js cookie start-----------------
 function setCookie(cName, cValue, exDay){
     const d = new Date();
-    console.log(d);
+ 
     d.setTime(d.getTime() + (exDay * 24 * 60 * 60 * 1000));
-    console.log(d.getTime());
+   
     let expires = 'expires=' + d.toUTCString();
     document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
+}
+
+function getCookie(cName){
+    // 'name=ali'
+    const cookieArray = document.cookie.split(';');
+    console.log(cookieArray);
+    let name = cName+ '=';
+    for(let i = 0; i<cookieArray.length; i++){
+        let cookieText = cookieArray[i];
+        
+        while(cookieText.charAt(0) === " "){
+            cookieText = cookieText.substring(1);
+        }
+        if(cookieText.indexOf(name) === 0){
+           return cookieText.substring(name.length);
+        }
+    }
+    return "";
 }
 // ----------------js cookie end-----------------
