@@ -129,30 +129,42 @@
 // ----------------js timing events end-----------------
 
 // ----------------js cookie start-----------------
-function setCookie(cName, cValue, exDay){
+function setCookie(cName, cValue, exDay) {
     const d = new Date();
- 
+
     d.setTime(d.getTime() + (exDay * 24 * 60 * 60 * 1000));
-   
+
     let expires = 'expires=' + d.toUTCString();
     document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
 }
 
-function getCookie(cName){
+function getCookie(cName) {
     // 'name=ali'
     const cookieArray = document.cookie.split(';');
     console.log(cookieArray);
-    let name = cName+ '=';
-    for(let i = 0; i<cookieArray.length; i++){
+    let name = cName + '=';
+    for (let i = 0; i < cookieArray.length; i++) {
         let cookieText = cookieArray[i];
-        
-        while(cookieText.charAt(0) === " "){
+
+        while (cookieText.charAt(0) === " ") {
             cookieText = cookieText.substring(1);
         }
-        if(cookieText.indexOf(name) === 0){
-           return cookieText.substring(name.length);
+        if (cookieText.indexOf(name) === 0) {
+            return cookieText.substring(name.length);
         }
     }
     return "";
+}
+
+function checkCookie(cName) {
+    let username = getCookie(cName);
+    if (username != "") {
+        alert("Welcome again " + username);
+    } else {
+        username = prompt("Please enter your name:", "");
+        if (username != "" && username != null) {
+            setCookie("username", username, 365);
+        }
+    }
 }
 // ----------------js cookie end-----------------
