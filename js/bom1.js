@@ -102,28 +102,39 @@
 // ----------------js popup alert end-----------------
 
 // ----------------js timing events start-----------------
-const timeout =  document.getElementById('timeout');
-const interval = document.getElementById('interval');
+// const timeout =  document.getElementById('timeout');
+// const interval = document.getElementById('interval');
 
-let timeoutInstance;
-let intervalInstace;
-function startTimeout(){
-   timeoutInstance = setTimeout(function(){
-        timeout.innerHTML = 'hello world';
-    },3000);
-}
+// let timeoutInstance;
+// let intervalInstace;
+// function startTimeout(){
+//    timeoutInstance = setTimeout(function(){
+//         timeout.innerHTML = 'hello world';
+//     },3000);
+// }
 
-function stopTimeout(){
-    clearTimeout(timeoutInstance);
-}
+// function stopTimeout(){
+//     clearTimeout(timeoutInstance);
+// }
 
-function startInterval(){
-  intervalInstace = setInterval(function(){
-        interval.innerHTML = new Date().toLocaleTimeString();
-    },1000)
-}
+// function startInterval(){
+//   intervalInstace = setInterval(function(){
+//         interval.innerHTML = new Date().toLocaleTimeString();
+//     },1000)
+// }
 
-function stopInterval(){
-    clearInterval(intervalInstace);
-}
+// function stopInterval(){
+//     clearInterval(intervalInstace);
+// }
 // ----------------js timing events end-----------------
+
+// ----------------js cookie start-----------------
+function setCookie(cName, cValue, exDay){
+    const d = new Date();
+    console.log(d);
+    d.setTime(d.getTime() + (exDay * 24 * 60 * 60 * 1000));
+    console.log(d.getTime());
+    let expires = 'expires=' + d.toUTCString();
+    document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
+}
+// ----------------js cookie end-----------------
