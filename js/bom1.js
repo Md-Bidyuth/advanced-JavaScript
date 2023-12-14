@@ -129,15 +129,8 @@
 // ----------------js timing events end-----------------
 
 // ----------------js cookie start-----------------
-// function setCookie(cName, cValue, exDay) {
-//     const d = new Date();
 
-//     d.setTime(d.getTime() + (exDay * 24 * 60 * 60 * 1000));
-
-//     let expires = 'expires=' + d.toUTCString();
-//     document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
-// }
-function setNameCookie(cName, cValue, exDay) {
+function setCookie(cName, cValue, exDay) {
     //   cookie format : "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/"
        const d = new Date();
        d.setTime(d.getTime() + (exDay * 24 * 60 * 60 * 1000));
@@ -145,33 +138,37 @@ function setNameCookie(cName, cValue, exDay) {
 
        document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
 }
-// function getCookie(cName) {
-//     // 'name=ali'
-//     const cookieArray = document.cookie.split(';');
-//     console.log(cookieArray);
-//     let name = cName + '=';
-//     for (let i = 0; i < cookieArray.length; i++) {
-//         let cookieText = cookieArray[i];
 
-//         while (cookieText.charAt(0) === " ") {
-//             cookieText = cookieText.substring(1);
-//         }
-//         if (cookieText.indexOf(name) === 0) {
-//             return cookieText.substring(name.length);
-//         }
-//     }
-//     return "";
-// }
+function getCookie(cName){
+    // cookie format : name=ali jaber; username=bidyut || ['name=ali jaber', ' username=bidyut']
+        
+       const cookieArr = document.cookie.split(';');
+    //    console.log(cookieArr);
+       let name = cName + '=';
+       for (let i = 0; i<cookieArr.length; i++){
+        let cookieElement = cookieArr[i];
+        // console.log(cookieElement);
+        while(cookieElement.charAt(0) === ' '){
+            cookieElement = cookieElement.substring(1);
+        }
+        if(cookieElement.indexOf(name) === 0){
+              return cookieElement.substring(name.length);
+              
+        } 
+       
+       }
+       return 'invalid input';
+}
 
-// function checkCookie(cName) {
-//     let username = getCookie(cName);
-//     if (username != "") {
-//         alert("Welcome again " + username);
-//     } else {
-//         username = prompt("Please enter your name:", "");
-//         if (username != "" && username != null) {
-//             setCookie("username", username, 365);
-//         }
-//     }
-// }
+function checkCookie(cName){
+    let userName = getCookie(cName);
+    if(userName !== '') {
+        alert('welcome ' + userName);
+    } else {
+        userName = prompt("enter your name : " , "demo name");
+        if(userName !== "" || userName !==  null){
+            setCookie(cName, userName, 2);
+        }
+    }
+}
 // ----------------js cookie end-----------------
