@@ -174,18 +174,36 @@
 // ----------------js cookie end-----------------
 
 // ----------------js forms API start-----------------
-    function myFunction() {
-        const inputObj  = document.getElementById('id1');
+    // function myFunction() {
+    //     const inputObj  = document.getElementById('id1');
         
-        if(inputObj.validity.rangeOverflow){
-           inputObj.setCustomValidity('you have made range overflow error');
-        } else if(inputObj.validity.rangeUnderflow){
-            inputObj.setCustomValidity('range underfllow error occured');
-        } else if(inputObj.validity.valueMissing){
-            inputObj.setCustomValidity('give the value');
-        }
-        if(!inputObj.checkValidity()){
-             document.getElementById('demo').innerHTML = inputObj.validationMessage;
-        }
-    }
+    //     if(inputObj.validity.rangeOverflow){
+    //        inputObj.setCustomValidity('you have made range overflow error');
+    //     } else if(inputObj.validity.rangeUnderflow){
+    //         inputObj.setCustomValidity('range underfllow error occured');
+    //     } else if(inputObj.validity.valueMissing){
+    //         inputObj.setCustomValidity('give the value');
+    //     }
+    //     if(!inputObj.checkValidity()){
+    //          document.getElementById('demo').innerHTML = inputObj.validationMessage;
+    //     }
+    // }
 // ----------------js forms API end-----------------
+
+// ----------------js history API start-----------------
+function goBack(){
+    window.history.back();
+}
+
+function backTo(n){
+    window.history.go(n);
+}
+
+function goForward(){
+    window.history.forward();
+}
+
+function getHistory(){
+    alert(window.history.length);
+}
+// ----------------js hitory API end-----------------
