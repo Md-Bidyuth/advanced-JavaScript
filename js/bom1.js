@@ -137,7 +137,14 @@
 //     let expires = 'expires=' + d.toUTCString();
 //     document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
 // }
+function setNameCookie(cName, cValue, exDay) {
+    //   cookie format : "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/"
+       const d = new Date();
+       d.setTime(d.getTime() + (exDay * 24 * 60 * 60 * 1000));
+       let expires  = 'expires='+d.toUTCString();
 
+       document.cookie = cName + '=' + cValue + ';' + expires + ';path=/';
+}
 // function getCookie(cName) {
 //     // 'name=ali'
 //     const cookieArray = document.cookie.split(';');
