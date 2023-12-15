@@ -209,19 +209,36 @@
 // ----------------js hitory API end-----------------
 
 // ----------------js storage API start-----------------
-function setLocalStorage(key, value){
-    localStorage.setItem(key, value);
+// local storage
+// function setLocalStorage(key, value){
+//     localStorage.setItem(key, value);
+// }
+
+// function getLocalStorage(key){
+//     alert(localStorage.getItem(key));
+// }
+
+// function removeLocalStorage(key){
+//     localStorage.removeItem(key);
+// }
+
+// function clearLocalStorage(){
+//     localStorage.clear();
+// }
+// session storage
+function setSessionStorage(key, value){
+    sessionStorage.setItem(key, value);
 }
 
-function getLocalStorage(key){
-    alert(localStorage.getItem(key));
+function getSessionStorage(key){
+    alert(sessionStorage.getItem(key));
 }
 
-function removeLocalStorage(key){
-    localStorage.removeItem(key);
+function removeSessionStorage(key){
+    sessionStorage.removeItem(key);
 }
 
-function clearLocalStorage(){
-    localStorage.clear();
+function clearSessionStorage(){
+    sessionStorage.clear();
 }
 // ----------------js storage API end-----------------
