@@ -226,19 +226,46 @@
 //     localStorage.clear();
 // }
 // session storage
-function setSessionStorage(key, value){
-    sessionStorage.setItem(key, value);
-}
+// function setSessionStorage(key, value){
+//     sessionStorage.setItem(key, value);
+// }
 
-function getSessionStorage(key){
-    alert(sessionStorage.getItem(key));
-}
+// function getSessionStorage(key){
+//     alert(sessionStorage.getItem(key));
+// }
 
-function removeSessionStorage(key){
-    sessionStorage.removeItem(key);
-}
+// function removeSessionStorage(key){
+//     sessionStorage.removeItem(key);
+// }
 
-function clearSessionStorage(){
-    sessionStorage.clear();
-}
+// function clearSessionStorage(){
+//     sessionStorage.clear();
+// }
 // ----------------js storage API end-----------------
+
+// ----------------js web Worker API start-----------------
+let w;
+
+function startWorker(){
+      if(typeof Worker !== 'undefined'){
+
+        if(typeof w == 'undefined'){
+            w = new Worker('./js/worker.js');
+        }
+        
+        w.onmessage = function(event) {
+            document.getElementById('demo').innerHTML = event.data;
+            console.log(event);
+        }
+      } else {
+        alert('your browser does not support Worker API');
+      }
+}
+
+function stopWorker(){
+       if(typeof w !== 'undefined'){
+        w.terminate();
+        w = undefined;
+       }
+}
+// ----------------js web Worker API end-----------------
