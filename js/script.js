@@ -273,12 +273,17 @@
 // ----------------js fetch API start-----------------
 const p = document.getElementById('demo');
 
-function getData() {
-    fetch('http://127.0.0.1:5500/data.txt')
-        .then(res => res.text())
-        .then(data => {
-            p.innerText = data
-        });
+// function getData() {
+//     fetch('http://127.0.0.1:5500/data.txt')
+//         .then(res => res.text())
+//         .then(data => {
+//             p.innerText = data
+//         });
 
+// }
+async function getData() {
+   const res = await fetch('http://127.0.0.1:5500/data.txt');
+   const data = await res.text();
+   p.innerText = data;
 }
 // ----------------js fetch API end-----------------
