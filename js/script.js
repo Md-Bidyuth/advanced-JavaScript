@@ -271,7 +271,7 @@
 // ----------------js web Worker API end-----------------
 
 // ----------------js fetch API start-----------------
-const p = document.getElementById('demo');
+// const p = document.getElementById('demo');
 
 // function getData() {
 //     fetch('http://127.0.0.1:5500/data.txt')
@@ -281,9 +281,45 @@ const p = document.getElementById('demo');
 //         });
 
 // }
-async function getData() {
-   const res = await fetch('http://127.0.0.1:5500/data.txt');
-   const data = await res.text();
-   p.innerText = data;
-}
+// async function getData() {
+//    const res = await fetch('http://127.0.0.1:5500/data.txt');
+//    const data = await res.text();
+//    p.innerText = data;
+// }
 // ----------------js fetch API end-----------------
+
+// ----------------js geoLocation API start-----------------
+const p = document.getElementById('demo');
+
+function getLocation() {
+    if(navigator.geolocation){
+       navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        p.innerHTML = 'geolocation is not supported';
+    }
+}
+
+function showPosition(position) {
+    console.log(position);
+    console.log(position.coords.accuracy);
+    p.innerHTML = 'latitude is : ' + position.coords.latitude +
+    " <br/> longitude is : " + position.coords.longitude;
+}
+
+function showError(error) {
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        p.innerHTML = "User denied the request for Geolocation."
+        break;
+      case error.POSITION_UNAVAILABLE:
+        p.innerHTML = "Location information is unavailable."
+        break;
+      case error.TIMEOUT:
+        p.innerHTML = "The request to get user location timed out."
+        break;
+      case error.UNKNOWN_ERROR:
+        p.innerHTML = "An unknown error occurred."
+        break;
+    }
+  }
+// ----------------js geoLocation API end-----------------
