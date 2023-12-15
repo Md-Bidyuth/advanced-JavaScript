@@ -191,19 +191,37 @@
 // ----------------js forms API end-----------------
 
 // ----------------js history API start-----------------
-function goBack(){
-    window.history.back();
-}
+// function goBack(){
+//     window.history.back();
+// }
 
-function backTo(n){
-    window.history.go(n);
-}
+// function backTo(n){
+//     window.history.go(n);
+// }
 
-function goForward(){
-    window.history.forward();
-}
+// function goForward(){
+//     window.history.forward();
+// }
 
-function getHistory(){
-    alert(window.history.length);
-}
+// function getHistory(){
+//     alert(window.history.length);
+// }
 // ----------------js hitory API end-----------------
+
+// ----------------js storage API start-----------------
+function setLocalStorage(key, value){
+    localStorage.setItem(key, value);
+}
+
+function getLocalStorage(key){
+    alert(localStorage.getItem(key));
+}
+
+function removeLocalStorage(key){
+    localStorage.removeItem(key);
+}
+
+function clearLocalStorage(){
+    localStorage.clear();
+}
+// ----------------js storage API end-----------------

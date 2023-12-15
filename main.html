@@ -87,9 +87,21 @@
 <!-- ----------------js forms API end----------------- -->
 
 <!-- ----------------js history API start----------------- -->
-<a href="./one.html">page1</a>
+<!-- <a href="./one.html">page1</a> -->
 
 <!-- ----------------js history API end----------------- -->
- <script src="./js/bom1.js"></script>
+
+<!-- ----------------js storage API start----------------- -->
+<p><button onclick="setLocalStorage('username', 'bidytuh')">set local Storage username</button></p>
+<p><button onclick="getLocalStorage('username')">get local Storage username</button></p>
+<p><button onclick="setLocalStorage('name', 'ali abdullah jaber')">set local Storage name</button></p>
+<p><button onclick="getLocalStorage('name')">get local Storage name</button></p>
+<p><button onclick="removeLocalStorage('username')">remove local Storage username</button></p>
+<p><button onclick="clearLocalStorage()">clear local storage</button></p>
+
+
+<!-- ----------------js storage API end----------------- -->
+
+ <script src="./js/script.js"></script>
 </body>
 </html>
