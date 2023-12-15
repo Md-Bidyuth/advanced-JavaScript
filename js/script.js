@@ -291,14 +291,20 @@
 // ----------------js geoLocation API start-----------------
 const p = document.getElementById('demo');
 
+// function getLocation() {
+//     if(navigator.geolocation){
+//        navigator.geolocation.getCurrentPosition(showPosition, showError);
+//     } else {
+//         p.innerHTML = 'geolocation is not supported';
+//     }
+// }
 function getLocation() {
     if(navigator.geolocation){
-       navigator.geolocation.getCurrentPosition(showPosition, showError);
+       navigator.geolocation.watchPosition(showPosition, showError);
     } else {
         p.innerHTML = 'geolocation is not supported';
     }
 }
-
 function showPosition(position) {
     console.log(position);
     console.log(position.coords.accuracy);
@@ -321,5 +327,5 @@ function showError(error) {
         p.innerHTML = "An unknown error occurred."
         break;
     }
-  }
+  } 
 // ----------------js geoLocation API end-----------------
