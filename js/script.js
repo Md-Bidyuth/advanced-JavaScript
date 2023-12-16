@@ -289,7 +289,7 @@
 // ----------------js fetch API end-----------------
 
 // ----------------js geoLocation API start-----------------
-const p = document.getElementById('demo');
+// const p = document.getElementById('demo');
 
 // function getLocation() {
 //     if(navigator.geolocation){
@@ -331,18 +331,33 @@ const p = document.getElementById('demo');
 // ----------------js geoLocation API end-----------------
 
 // ----------------js AJAX start-----------------
-function loadData(){
+function loadData(callback){
    const xhr = new XMLHttpRequest();
 
   //  what to do when ajax request arrive 
    xhr.onload = function(){
-    const container = document.getElementById('demo');
-    container.innerHTML = xhr.responseText;
-  
-  }
+             callback(this);
+   }
 
   xhr.open('GET', 'http://127.0.0.1:5500/data.txt');
+  // xhr.setRequestHeader('MY_Language', 'JavaScript');
 
   xhr.send();
+  // xhr.abort();
+  // const x = xhr.getResponseHeader('Date');
+  // console.log(x);
+}
+
+function callback1(xhr){
+  const container = document.getElementById('demo');
+  container.innerHTML = xhr.responseText;
+
+}
+
+function callback2(xhr){
+  const container = document.getElementById('demo2');
+  container.innerHTML = xhr.responseText;
+ 
+
 }
 // ----------------js AJAX  end-----------------
