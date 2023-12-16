@@ -298,34 +298,51 @@ const p = document.getElementById('demo');
 //         p.innerHTML = 'geolocation is not supported';
 //     }
 // }
-function getLocation() {
-    if(navigator.geolocation){
-       navigator.geolocation.watchPosition(showPosition, showError);
-    } else {
-        p.innerHTML = 'geolocation is not supported';
-    }
-}
-function showPosition(position) {
-    console.log(position);
-    console.log(position.coords.accuracy);
-    p.innerHTML = 'latitude is : ' + position.coords.latitude +
-    " <br/> longitude is : " + position.coords.longitude;
-}
+// function getLocation() {
+//     if(navigator.geolocation){
+//        navigator.geolocation.watchPosition(showPosition, showError);
+//     } else {
+//         p.innerHTML = 'geolocation is not supported';
+//     }
+// }
+// function showPosition(position) {
+//     console.log(position);
+//     console.log(position.coords.accuracy);
+//     p.innerHTML = 'latitude is : ' + position.coords.latitude +
+//     " <br/> longitude is : " + position.coords.longitude;
+// }
 
-function showError(error) {
-    switch(error.code) {
-      case error.PERMISSION_DENIED:
-        p.innerHTML = "User denied the request for Geolocation."
-        break;
-      case error.POSITION_UNAVAILABLE:
-        p.innerHTML = "Location information is unavailable."
-        break;
-      case error.TIMEOUT:
-        p.innerHTML = "The request to get user location timed out."
-        break;
-      case error.UNKNOWN_ERROR:
-        p.innerHTML = "An unknown error occurred."
-        break;
-    }
-  } 
+// function showError(error) {
+//     switch(error.code) {
+//       case error.PERMISSION_DENIED:
+//         p.innerHTML = "User denied the request for Geolocation."
+//         break;
+//       case error.POSITION_UNAVAILABLE:
+//         p.innerHTML = "Location information is unavailable."
+//         break;
+//       case error.TIMEOUT:
+//         p.innerHTML = "The request to get user location timed out."
+//         break;
+//       case error.UNKNOWN_ERROR:
+//         p.innerHTML = "An unknown error occurred."
+//         break;
+//     }
+//   } 
 // ----------------js geoLocation API end-----------------
+
+// ----------------js AJAX start-----------------
+function loadData(){
+   const xhr = new XMLHttpRequest();
+
+  //  what to do when ajax request arrive 
+   xhr.onload = function(){
+    const container = document.getElementById('demo');
+    container.innerHTML = xhr.responseText;
+  
+  }
+
+  xhr.open('GET', 'http://127.0.0.1:5500/data.txt');
+
+  xhr.send();
+}
+// ----------------js AJAX  end-----------------
