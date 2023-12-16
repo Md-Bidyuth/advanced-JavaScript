@@ -336,9 +336,13 @@ function loadData(){
 
   //  what to do when ajax request arrive 
    xhr.onload = function(){
-    console.log('hello 1');
     const container = document.getElementById('demo');
+    const container2 = document.getElementById('demo2');
     container.innerHTML = this.responseText;
+    container2.innerHTML = this.getAllResponseHeaders();
+    console.log(this.getAllResponseHeaders());
+    console.log(this.getResponseHeader('date'));
+
   
   }
 
@@ -349,7 +353,7 @@ function loadData(){
   // xhr.abort();
   // const x = xhr.getResponseHeader('Date');
   // console.log(x);
-  console.log('hello 2');
+ 
 }
 
 
