@@ -331,33 +331,30 @@
 // ----------------js geoLocation API end-----------------
 
 // ----------------js AJAX start-----------------
-function loadData(callback){
+function loadData(){
    const xhr = new XMLHttpRequest();
 
   //  what to do when ajax request arrive 
    xhr.onload = function(){
-             callback(this);
-   }
+    console.log('hello 1');
+    const container = document.getElementById('demo');
+    container.innerHTML = this.responseText;
+  
+  }
 
-  xhr.open('GET', 'http://127.0.0.1:5500/data.txt');
+  xhr.open('GET', 'http://127.0.0.1:5500/data.txt', false);
   // xhr.setRequestHeader('MY_Language', 'JavaScript');
 
   xhr.send();
   // xhr.abort();
   // const x = xhr.getResponseHeader('Date');
   // console.log(x);
+  console.log('hello 2');
 }
 
-function callback1(xhr){
-  const container = document.getElementById('demo');
-  container.innerHTML = xhr.responseText;
 
-}
 
-function callback2(xhr){
-  const container = document.getElementById('demo2');
-  container.innerHTML = xhr.responseText;
  
 
-}
+
 // ----------------js AJAX  end-----------------
