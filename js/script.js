@@ -331,7 +331,7 @@
 // ----------------js geoLocation API end-----------------
 
 // ----------------js AJAX start-----------------
-function sendRequest(method, url, callback1) {
+function sendRequest(method, url, data) {
       const promise = new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
 
@@ -342,7 +342,7 @@ function sendRequest(method, url, callback1) {
         xhr.open(method, url);
         xhr.responseType = 'json';
  
-        xhr.send();
+        xhr.send(data );
 
       });
       return promise;
@@ -358,7 +358,15 @@ function getData() {
 }
 
 function sendData() {
-
+      sendRequest('POST', 'https://jsonplaceholder.typicode.com/posts', 
+      JSON.stringify({
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+      }))
+      .then((xhr) => {
+        console.log(xhr);
+      })
 }
 
 const getBtn = document.getElementById('get');
