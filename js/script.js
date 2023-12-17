@@ -141,7 +141,7 @@
 
 // function getCookie(cName){
 //     // cookie format : name=ali jaber; username=bidyut || ['name=ali jaber', ' username=bidyut']
-        
+
 //        const cookieArr = document.cookie.split(';');
 //     //    console.log(cookieArr);
 //        let name = cName + '=';
@@ -153,9 +153,9 @@
 //         }
 //         if(cookieElement.indexOf(name) === 0){
 //               return cookieElement.substring(name.length);
-              
+
 //         } 
-       
+
 //        }
 //        return 'invalid input';
 // }
@@ -174,20 +174,20 @@
 // ----------------js cookie end-----------------
 
 // ----------------js forms API start-----------------
-    // function myFunction() {
-    //     const inputObj  = document.getElementById('id1');
-        
-    //     if(inputObj.validity.rangeOverflow){
-    //        inputObj.setCustomValidity('you have made range overflow error');
-    //     } else if(inputObj.validity.rangeUnderflow){
-    //         inputObj.setCustomValidity('range underfllow error occured');
-    //     } else if(inputObj.validity.valueMissing){
-    //         inputObj.setCustomValidity('give the value');
-    //     }
-    //     if(!inputObj.checkValidity()){
-    //          document.getElementById('demo').innerHTML = inputObj.validationMessage;
-    //     }
-    // }
+// function myFunction() {
+//     const inputObj  = document.getElementById('id1');
+
+//     if(inputObj.validity.rangeOverflow){
+//        inputObj.setCustomValidity('you have made range overflow error');
+//     } else if(inputObj.validity.rangeUnderflow){
+//         inputObj.setCustomValidity('range underfllow error occured');
+//     } else if(inputObj.validity.valueMissing){
+//         inputObj.setCustomValidity('give the value');
+//     }
+//     if(!inputObj.checkValidity()){
+//          document.getElementById('demo').innerHTML = inputObj.validationMessage;
+//     }
+// }
 // ----------------js forms API end-----------------
 
 // ----------------js history API start-----------------
@@ -252,7 +252,7 @@
 //         if(typeof w == 'undefined'){
 //             w = new Worker('./js/worker.js');
 //         }
-        
+
 //         w.onmessage = function(event) {
 //             document.getElementById('demo').innerHTML = event.data;
 //             console.log(event);
@@ -331,34 +331,34 @@
 // ----------------js geoLocation API end-----------------
 
 // ----------------js AJAX start-----------------
-function loadData(){
-   const xhr = new XMLHttpRequest();
+function sendRequest(method, url, callback1) {
+      const xhr = new XMLHttpRequest();
 
-  //  what to do when ajax request arrive 
-   xhr.onload = function(){
-    const container = document.getElementById('demo');
-    const container2 = document.getElementById('demo2');
-    container.innerHTML = this.responseText;
-    container2.innerHTML = this.getAllResponseHeaders();
-    console.log(this.getAllResponseHeaders());
-    console.log(this.getResponseHeader('date'));
+       xhr.onload = function () {
+            callback1(xhr);
+    };
 
-  
-  }
+       xhr.open(method, url);
+       xhr.responseType = 'json';
 
-  xhr.open('GET', 'http://127.0.0.1:5500/data.txt', false);
-  // xhr.setRequestHeader('MY_Language', 'JavaScript');
+       xhr.send();
+   }
 
-  xhr.send();
-  // xhr.abort();
-  // const x = xhr.getResponseHeader('Date');
-  // console.log(x);
- 
+function getData() {
+      sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/1', onLoadFunc);
+      
+      function onLoadFunc (xhr) {
+        console.log(xhr.response);
+      }
 }
 
+function sendData() {
 
+}
 
- 
+const getBtn = document.getElementById('get');
+const sendBtn = document.getElementById('send');
 
-
+getBtn.addEventListener('click', getData);
+sendBtn.addEventListener('click', sendData);
 // ----------------js AJAX  end-----------------
