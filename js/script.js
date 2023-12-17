@@ -336,23 +336,33 @@ function sendRequest(method, url, data) {
         const xhr = new XMLHttpRequest();
 
         xhr.onload = function() {
-           resolve(this.response);
+          if(this.status < 400){ 
+              resolve(this.response);
+            } else {
+              reject(`application error and status is ${this.status}`)
+            }
+       }
+
+       xhr.onerror = function(){
+           reject('There was an error.');
        }
  
         xhr.open(method, url);
         xhr.responseType = 'json';
- 
+      
         xhr.send(data );
-
       });
       return promise;
       
    }
 
 function getData() {
-      sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/1')
+      sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/one')
           .then((xhr) => {
             console.log(xhr);
+          })
+          .catch((err) => {
+            console.log(err);
           })
    
 }
