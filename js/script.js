@@ -332,24 +332,29 @@
 
 // ----------------js AJAX start-----------------
 function sendRequest(method, url, callback1) {
-      const xhr = new XMLHttpRequest();
+      const promise = new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
 
-       xhr.onload = function () {
-            callback1(xhr);
-    };
+        xhr.onload = function() {
+           resolve(this.response);
+       }
+ 
+        xhr.open(method, url);
+        xhr.responseType = 'json';
+ 
+        xhr.send();
 
-       xhr.open(method, url);
-       xhr.responseType = 'json';
-
-       xhr.send();
+      });
+      return promise;
+      
    }
 
 function getData() {
-      sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/1', onLoadFunc);
-      
-      function onLoadFunc (xhr) {
-        console.log(xhr.response);
-      }
+      sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/1')
+          .then((xhr) => {
+            console.log(xhr);
+          })
+   
 }
 
 function sendData() {
