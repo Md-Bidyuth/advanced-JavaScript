@@ -385,3 +385,7 @@
 // getBtn.addEventListener('click', getData);
 // sendBtn.addEventListener('click', sendData);
 // ----------------js AJAX  end-----------------
+
+// ----------------js AJAX  end-----------------
+
+// ----------------js AJAX  end-----------------
