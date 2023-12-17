@@ -331,57 +331,57 @@
 // ----------------js geoLocation API end-----------------
 
 // ----------------js AJAX start-----------------
-function sendRequest(method, url, data) {
-      const promise = new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
+// function sendRequest(method, url, data) {
+//       const promise = new Promise((resolve, reject) => {
+//         const xhr = new XMLHttpRequest();
 
-        xhr.onload = function() {
-          if(this.status < 400){ 
-              resolve(this.response);
-            } else {
-              reject(`application error and status is ${this.status}`)
-            }
-       }
+//         xhr.onload = function() {
+//           if(this.status < 400){ 
+//               resolve(this.response);
+//             } else {
+//               reject(`application error and status is ${this.status}`)
+//             }
+//        }
 
-       xhr.onerror = function(){
-           reject('There was an error.');
-       }
+  //      xhr.onerror = function(){
+  //          reject('There was an error.');
+  //      }
  
-        xhr.open(method, url);
-        xhr.responseType = 'json';
+  //       xhr.open(method, url);
+  //       xhr.responseType = 'json';
       
-        xhr.send(data );
-      });
-      return promise;
+  //       xhr.send(data );
+  //     });
+  //     return promise;
       
-   }
+  //  }
 
-function getData() {
-      sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/one')
-          .then((xhr) => {
-            console.log(xhr);
-          })
-          .catch((err) => {
-            console.log(err);
-          })
+// function getData() {
+//       sendRequest('GET', 'https://jsonplaceholder.typicode.com/todos/one')
+//           .then((xhr) => {
+//             console.log(xhr);
+//           })
+//           .catch((err) => {
+//             console.log(err);
+//           })
    
-}
+// }
 
-function sendData() {
-      sendRequest('POST', 'https://jsonplaceholder.typicode.com/posts', 
-      JSON.stringify({
-        title: 'foo',
-        body: 'bar',
-        userId: 1,
-      }))
-      .then((xhr) => {
-        console.log(xhr);
-      })
-}
+// function sendData() {
+//       sendRequest('POST', 'https://jsonplaceholder.typicode.com/posts', 
+//       JSON.stringify({
+//         title: 'foo',
+//         body: 'bar',
+//         userId: 1,
+//       }))
+//       .then((xhr) => {
+//         console.log(xhr);
+//       })
+// }
 
-const getBtn = document.getElementById('get');
-const sendBtn = document.getElementById('send');
+// const getBtn = document.getElementById('get');
+// const sendBtn = document.getElementById('send');
 
-getBtn.addEventListener('click', getData);
-sendBtn.addEventListener('click', sendData);
+// getBtn.addEventListener('click', getData);
+// sendBtn.addEventListener('click', sendData);
 // ----------------js AJAX  end-----------------
