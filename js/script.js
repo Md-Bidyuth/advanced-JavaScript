@@ -421,13 +421,13 @@
 // js contractor start
 function Person(first, last, age,) {
   this.firstName = first;
-  this.lastName = last;
+  // this.lastName = last;
   this.age = age;
   // this.eyeColor = eye;
 }
 
 const myFather = new Person("John", "Doe", 50);
-console.log(myFather);
-const myMother = new Person("Sally", "Rally", 48);
-console.log(myMother.eyeColor);
+console.log(myFather.age);
+// const myMother = new Person("Sally", "Rally", 48);
+// console.log(myMother.eyeColor);
 // ----------------js object getter and setter  end-----------------
