@@ -427,4 +427,5 @@ function Person(first, last, age, eye) {
 }
 
 const myFather = new Person("John", "Doe", 50, "blue");
+console.log(myFather);
 // ----------------js object getter and setter  end-----------------
