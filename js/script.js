@@ -419,15 +419,29 @@
 // console.log(person);
 
 // js contractor start
-function Person(first, last, age,) {
-  this.firstName = first;
+// function Person(first, last, age,) {
+//   this.firstName = first;
   // this.lastName = last;
-  this.age = age;
+  // this.age = age;
   // this.eyeColor = eye;
-}
+// }
 
-const myFather = new Person("John", "Doe", 50);
-console.log(myFather.age);
+// const myFather = new Person("John", "Doe", 50);
+// console.log(myFather.age);
 // const myMother = new Person("Sally", "Rally", 48);
 // console.log(myMother.eyeColor);
-// ----------------js object getter and setter  end-----------------
+// ----------------js object getter and setter  end----------------
+
+// ----------------js Prototype start -----------------
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+Person.prototype.nationality = "English";
+
+console.dir(myFather.nationality)
+// ----------------js Prototype end-----------------
