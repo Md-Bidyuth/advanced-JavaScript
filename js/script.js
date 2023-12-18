@@ -429,5 +429,5 @@ function Person(first, last, age, eye) {
 const myFather = new Person("John", "Doe", 50, "blue");
 console.log(myFather);
 const myMother = new Person("Sally", "Rally", 48, "green");
-console.log(myMother);
+console.log(myMother.eyeColor);
 // ----------------js object getter and setter  end-----------------
