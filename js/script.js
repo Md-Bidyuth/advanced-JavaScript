@@ -433,15 +433,33 @@
 // ----------------js object getter and setter  end----------------
 
 // ----------------js Prototype start -----------------
-function Person(first, last, age, eyecolor) {
-  this.firstName = first;
-  this.lastName = last;
-  this.age = age;
-  this.eyeColor = eyecolor;
-}
-const myFather = new Person("John", "Doe", 50, "blue");
-const myMother = new Person("Sally", "Rally", 48, "green");
-Person.prototype.nationality = "English";
+// function Person(first, last, age, eyecolor) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eyecolor;
+// }
+// const myFather = new Person("John", "Doe", 50, "blue");
+// const myMother = new Person("Sally", "Rally", 48, "green");
+// Person.prototype.nationality = "English";
 
-console.dir(myFather.nationality)
+// console.dir(myFather.nationality)
 // ----------------js Prototype end-----------------
+
+// ----------------js object iterable start -----------------
+const number = {
+  one: 1,
+  two: 2,
+  three: 3
+ 
+}
+const nums = [ 1, 2, 3 ];
+// console.dir(number);
+const numIterator = nums[Symbol.iterator]();
+
+console.log(numIterator.next());
+console.log(numIterator.next());
+console.log(numIterator.next());
+console.log(numIterator.next());
+
+// ----------------js object iterable end-----------------
