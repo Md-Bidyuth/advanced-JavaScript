@@ -396,11 +396,11 @@
 
 // ----------------js object getter and setter start-----------------
 const person = {
-  firstName: 'ali',
+  firstName: 'ali abdullah',
   lastName: 'jaber',
-  set age(year){
-     this.year = year ;
-  }
+  // set age(year){
+  //    this.year = year ;
+  // }
 }
 person.age = 24;
 console.log(person);
@@ -417,4 +417,7 @@ console.log(person);
 // // Set an object property using a setter:
 // person.lang = "en";
 // console.log(person);
+
+// js contractor start
+
 // ----------------js object getter and setter  end-----------------
