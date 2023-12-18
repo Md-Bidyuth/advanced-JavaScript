@@ -447,19 +447,40 @@
 // ----------------js Prototype end-----------------
 
 // ----------------js object iterable start -----------------
-const number = {
-  one: 1,
-  two: 2,
-  three: 3
+// const number = {
+//   one: 1,
+//   two: 2,
+//   three: 3
  
-}
-const nums = [ 1, 2, 3 ];
-// console.dir(number);
-const numIterator = nums[Symbol.iterator]();
+// }
+// const nums = [ 1, 2, 3 ];
+// // console.dir(number);
+// const numIterator = nums[Symbol.iterator]();
 
-console.log(numIterator.next());
-console.log(numIterator.next());
-console.log(numIterator.next());
-console.log(numIterator.next());
+// console.log(numIterator.next());
+// console.log(numIterator.next());
+// console.log(numIterator.next());
+// console.log(numIterator.next());
+const myNumbersObj = {};
+
+myNumbersObj[Symbol.iterator] = function(){
+           let n = 0;
+           let done = false;
+        return {
+         
+             next(){
+                n += 1;
+                if(n > 100) { done = true }
+                  return {
+                       value: n ,
+                       done: done
+                  }
+              }
+        }
+}
+
+for ( let myNumber of myNumbersObj ){
+  console.log(myNumber);
+}
 
 // ----------------js object iterable end-----------------
