@@ -387,5 +387,9 @@
 // ----------------js AJAX  end-----------------
 
 // ----------------js AJAX  end-----------------
-
+  const person = {
+       name: 'ali',
+       age: 23,
+  }
+  console.log(JSON.stringify(person));
 // ----------------js AJAX  end-----------------
