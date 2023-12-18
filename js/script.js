@@ -386,10 +386,23 @@
 // sendBtn.addEventListener('click', sendData);
 // ----------------js AJAX  end-----------------
 
-// ----------------js AJAX  end-----------------
-  const person = {
-       name: 'ali',
-       age: 23,
+// ----------------js JSON  start-----------------
+  // const person = {
+  //      name: 'ali',
+  //      age: 23,
+  // }
+  // console.log(JSON.stringify(person));
+// ----------------js JSON  end-----------------
+
+// ----------------js object getter and setter start-----------------
+const person = {
+  firstName: 'ali',
+  lastName: 'jaber',
+  birthYear: 2001,
+  get age(){
+    return 2023 - this.birthYear;
   }
-  console.log(JSON.stringify(person));
-// ----------------js AJAX  end-----------------
+}
+
+console.log(person.age);
+// ----------------js object getter and setter  end-----------------
