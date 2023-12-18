@@ -398,11 +398,23 @@
 const person = {
   firstName: 'ali',
   lastName: 'jaber',
-  birthYear: 2001,
-  get age(){
-    return 2023 - this.birthYear;
+  set age(year){
+     this.year = year ;
   }
 }
+person.age = 24;
+console.log(person);
 
-console.log(person.age);
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   language: "",
+//   set lang(lang) {
+//     this.language = lang;
+//   }
+// };
+
+// // Set an object property using a setter:
+// person.lang = "en";
+// console.log(person);
 // ----------------js object getter and setter  end-----------------
