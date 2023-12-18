@@ -425,4 +425,6 @@ function Person(first, last, age, eye) {
   this.age = age;
   this.eyeColor = eye;
 }
+
+const myFather = new Person("John", "Doe", 50, "blue");
 // ----------------js object getter and setter  end-----------------
