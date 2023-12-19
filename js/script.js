@@ -461,28 +461,43 @@
 // console.log(numIterator.next());
 // console.log(numIterator.next());
 // console.log(numIterator.next());
-const myNumbersObj = {};
+// const myNumbersObj = {};
 
-myNumbersObj[Symbol.iterator] = function(){
-           let n = 0;
-           let done = false;
-        return {
+// myNumbersObj[Symbol.iterator] = function(){
+//            let n = 0;
+//            let done = false;
+//         return {
          
-             next(){
-                n += 1;
-                if(n > 100) { done = true }
-                  return {
-                       value: n ,
-                       done: done
-                  }
-              }
-        }
-}
+//              next(){
+//                 n += 1;
+//                 if(n > 100) { done = true }
+//                   return {
+//                        value: n ,
+//                        done: done
+//                   }
+//               }
+//         }
+// }
 
-for ( let myNumber of myNumbersObj ){
-  console.log(myNumber);
-}
-const x = {
-  name : 'ali'
-};
+// for ( let myNumber of myNumbersObj ){
+//   console.log(myNumber);
+// }
+
 // ----------------js object iterable end-----------------
+
+// ----------------js function closer start-----------------
+   const add = function(){
+        let count = 0;
+         function plus(){
+          count++;
+          return count;
+        }
+        return plus;
+   }
+
+   const func = add();
+   func();
+   func();
+   func();
+   console.log(func());
+// ----------------js function closer end-----------------
