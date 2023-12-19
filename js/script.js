@@ -486,18 +486,32 @@
 // ----------------js object iterable end-----------------
 
 // ----------------js function closer start-----------------
-   const add = function(){
-        let count = 0;
-         function plus(){
-          count++;
-          return count;
-        }
-        return plus;
-   }
+// function closer method 1 not using self invocation
+  //  const add = function(){
+  //       let count = 0;
+  //        function plus(){
+  //         count++;
+  //         return count;
+  //       }
+  //       return plus;
+  //  };
 
-   const func = add();
-   func();
-   func();
-   func();
-   console.log(func());
+  //  const func = add();
+  //  func();
+  //  func();
+  //  func();
+  //  console.log(func());
+  // function closer method 2 using self invocation
+          const add = (function(){
+            let count = 0;
+            function plus(){
+              count++;
+              return count;
+            }
+            return plus;
+        })();
+
+        add();
+        add();
+        console.log(add());
 // ----------------js function closer end-----------------
