@@ -482,5 +482,7 @@ myNumbersObj[Symbol.iterator] = function(){
 for ( let myNumber of myNumbersObj ){
   console.log(myNumber);
 }
-const x = {};
+const x = {
+  name : 'ali'
+};
 // ----------------js object iterable end-----------------
