@@ -538,9 +538,45 @@
 // displayOutput(result);
 
 
-console.log('hello 1');
-setTimeout(function(){
-  console.log('hello 2');
-},1000);
-console.log('hello 3');
+// console.log('hello 1');
+// setTimeout(function(){
+//   console.log('hello 2');
+// },1000);
+// console.log('hello 3');
+
+// callback second example:
+let paymentDone = true;
+let mark = 90;
+function enroll(callback){
+     console.log('step 1 : enrollment start');
+      if(paymentDone){
+        setTimeout(function(){
+          callback();
+     },2000);
+      } else {
+        console.log('payment failed');
+      }
+}
+
+function progress(callback){
+      console.log('step 2: progress start');
+      if(mark >= 80){
+        setTimeout(function(){
+          if(callback){callback();}
+      },5000);
+      } else {
+        console.log('not enough mark');
+      }
+}
+
+function getCertificate(){
+        console.log('step 3 : certificate is preparing');
+        setTimeout(function(){
+          console.log('congratulations !!!');
+        },1000)
+}
+
+enroll(function(){
+       progress(getCertificate)
+});
 // ----------------js asynchronous behaviour end-----------------
