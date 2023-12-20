@@ -545,38 +545,93 @@
 // console.log('hello 3');
 
 // callback second example:
+// let paymentDone = true;
+// let mark = 90;
+// function enroll(callback){
+//      console.log('step 1 : enrollment start');
+//       if(paymentDone){
+//         setTimeout(function(){
+//           callback();
+//      },2000);
+//       } else {
+//         console.log('payment failed');
+//       }
+// }
+
+// function progress(callback){
+//       console.log('step 2: progress start');
+//       if(mark >= 80){
+//         setTimeout(function(){
+//           callback();
+//       },1000);
+//       } else {
+//         console.log('not enough mark');
+//       }
+// }
+
+// function getCertificate(){
+//         console.log('step 3 : certificate is preparing');
+//         setTimeout(function(){
+//           console.log('congratulations !');
+//         },5000)
+// }
+
+// enroll(function(){
+//        progress(getCertificate)
+// });
+
+// js promise implementation
 let paymentDone = true;
-let mark = 90;
-function enroll(callback){
-     console.log('step 1 : enrollment start');
-      if(paymentDone){
-        setTimeout(function(){
-          callback();
-     },2000);
-      } else {
-        console.log('payment failed');
-      }
+let marks = 90;
+function enroll(){
+       console.log('step 1: enroll start');
+    
+     const promise = new Promise(function(resolve, reject){
+              setTimeout(function(){
+                if(paymentDone){
+                    resolve();
+                } else {
+                    reject('payment failed');
+                }
+              },2000)
+     });
+     return promise;
 }
 
-function progress(callback){
-      console.log('step 2: progress start');
-      if(mark >= 80){
-        setTimeout(function(){
-          callback();
-      },1000);
-      } else {
-        console.log('not enough mark');
-      }
+function progress(){
+  console.log('step 2 : progress start');
+
+  const promise = new Promise(function(resolve, reject){
+          setTimeout(function(){
+              if(marks > 80){
+                resolve();
+              } else {
+                reject('not enough marks');
+              } 
+          },100)
+  });
+     return promise;
 }
 
 function getCertificate(){
-        console.log('step 3 : certificate is preparing');
-        setTimeout(function(){
-          console.log('congratulations !');
-        },5000)
+    console.log('step 3 : getCertificate start');
+
+    const promise = new Promise(function(resolve){
+            setTimeout(function(){
+              resolve('Congrats !!!');
+            },1000)
+    });
+    return promise;
 }
 
-enroll(function(){
-       progress(getCertificate)
-});
+enroll()
+     .then(progress)
+     .then(getCertificate)
+     .then(function(msg){
+          console.log(msg);
+     })
+     .catch(function(err){
+          console.log(err);
+     })
+
 // ----------------js asynchronous behaviour end-----------------
