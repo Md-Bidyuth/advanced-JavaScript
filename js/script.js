@@ -562,8 +562,8 @@ function progress(callback){
       console.log('step 2: progress start');
       if(mark >= 80){
         setTimeout(function(){
-          if(callback){callback();}
-      },5000);
+          callback();
+      },1000);
       } else {
         console.log('not enough mark');
       }
@@ -573,7 +573,7 @@ function getCertificate(){
         console.log('step 3 : certificate is preparing');
         setTimeout(function(){
           console.log('congratulations !!!');
-        },1000)
+        },5000)
 }
 
 enroll(function(){
