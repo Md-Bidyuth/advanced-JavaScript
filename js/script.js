@@ -581,48 +581,48 @@
 // });
 
 // js promise implementation
-let paymentDone = true;
-let marks = 70;
-function enroll(){
-       console.log('step 1: enroll start');
+// let paymentDone = true;
+// let marks = 70;
+// function enroll(){
+//        console.log('step 1: enroll start');
     
-     const promise = new Promise(function(resolve, reject){
-              setTimeout(function(){
-                if(paymentDone){
-                    resolve();
-                } else {
-                    reject('payment failed');
-                }
-              },2000)
-     });
-     return promise;
-}
+//      const promise = new Promise(function(resolve, reject){
+//               setTimeout(function(){
+//                 if(paymentDone){
+//                     resolve();
+//                 } else {
+//                     reject('payment failed');
+//                 }
+//               },2000)
+//      });
+//      return promise;
+// }
 
-function progress(){
-  console.log('step 2 : progress start');
+// function progress(){
+//   console.log('step 2 : progress start');
 
-  const promise = new Promise(function(resolve, reject){
-          setTimeout(function(){
-              if(marks > 80){
-                resolve();
-              } else {
-                reject('not enough marks');
-              } 
-          },100)
-  });
-     return promise;
-}
+//   const promise = new Promise(function(resolve, reject){
+//           setTimeout(function(){
+//               if(marks > 80){
+//                 resolve();
+//               } else {
+//                 reject('not enough marks');
+//               } 
+//           },100)
+//   });
+//      return promise;
+// }
 
-function getCertificate(){
-    console.log('step 3 : getCertificate start');
+// function getCertificate(){
+//     console.log('step 3 : getCertificate start');
 
-    const promise = new Promise(function(resolve){
-            setTimeout(function(){
-              resolve('Congrats !!!');
-            },1000)
-    });
-    return promise;
-}
+//     const promise = new Promise(function(resolve){
+//             setTimeout(function(){
+//               resolve('Congrats !!!');
+//             },1000)
+//     });
+//     return promise;
+// }
 
 // enroll()
 //      .then(progress)
@@ -634,14 +634,43 @@ function getCertificate(){
 //           console.log(err);
 //      })
 // async-await syntax 
-async function completeCourse(){
-     try { await enroll();
-       await progress();
-       const msg = await getCertificate();
-         console.log(msg);
-        } catch(err) {
-            console.log(err);
-        }
-}
-completeCourse()
+// async function completeCourse(){
+//      try { await enroll();
+//        await progress();
+//        const msg = await getCertificate();
+//          console.log(msg);
+//         } catch(err) {
+//             console.log(err);
+//         }
+// }
+// completeCourse()
 // ----------------js asynchronous behaviour end-----------------
+
+// ----------------js web Worker API start-----------------
+let w;
+
+function startWorker(){
+      if(typeof Worker !== 'undefined'){
+
+        if(typeof w == 'undefined'){
+            w = new Worker('./js/worker.js');
+        }
+
+        w.onmessage = function(event) {
+            document.getElementById('demo').innerHTML = event.data;
+            console.log(event);
+        }
+      } else {
+        alert('your browser does not support Worker API');
+      }
+}
+
+function stopWorker(){
+       if(typeof w !== 'undefined'){
+        w.terminate();
+        w = undefined;
+       }
+}
+
+// ----------------js web Worker API end-----------------
+
