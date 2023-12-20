@@ -528,10 +528,10 @@ function calculate(number1, number2 ,callback) {
   let ans = number1 + number2;
   // checking whether the callback function has been passed or not as argument
       if(callback) {
-        displayOutput(ans);
+        callback(ans);
       }
 }
 
- calculate(2, 5, true);
+ calculate(2, 5, displayOutput);
 // displayOutput(result);
 // ----------------js asynchronous behaviour end-----------------
