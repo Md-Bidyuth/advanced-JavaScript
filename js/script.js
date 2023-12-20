@@ -521,9 +521,9 @@
 
 // ----------------js asynchronous behaviour start-----------------
 // js callback function start
-function displayOutput(ans){
-  console.log(ans);
-}
+// function displayOutput(ans){
+//   console.log(ans);
+// }
 function calculate(number1, number2 ,callback) {
   let ans = number1 + number2;
   // checking whether the callback function has been passed or not as argument
@@ -532,6 +532,8 @@ function calculate(number1, number2 ,callback) {
       }
 }
 
- calculate(2, 5, displayOutput);
+ calculate(2, 5, function(result){
+  console.log(result);
+ });
 // displayOutput(result);
 // ----------------js asynchronous behaviour end-----------------
