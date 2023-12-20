@@ -572,7 +572,7 @@ function progress(callback){
 function getCertificate(){
         console.log('step 3 : certificate is preparing');
         setTimeout(function(){
-          console.log('congratulations !!!');
+          console.log('congratulations !');
         },5000)
 }
 
