@@ -582,7 +582,7 @@
 
 // js promise implementation
 let paymentDone = true;
-let marks = 90;
+let marks = 70;
 function enroll(){
        console.log('step 1: enroll start');
     
@@ -624,14 +624,24 @@ function getCertificate(){
     return promise;
 }
 
-enroll()
-     .then(progress)
-     .then(getCertificate)
-     .then(function(msg){
-          console.log(msg);
-     })
-     .catch(function(err){
-          console.log(err);
-     })
-
+// enroll()
+//      .then(progress)
+//      .then(getCertificate)
+//      .then(function(msg){
+//           console.log(msg);
+//      })
+//      .catch(function(err){
+//           console.log(err);
+//      })
+// async-await syntax 
+async function completeCourse(){
+     try { await enroll();
+       await progress();
+       const msg = await getCertificate();
+         console.log(msg);
+        } catch(err) {
+            console.log(err);
+        }
+}
+completeCourse()
 // ----------------js asynchronous behaviour end-----------------
