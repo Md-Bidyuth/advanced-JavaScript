@@ -524,16 +524,23 @@
 // function displayOutput(ans){
 //   console.log(ans);
 // }
-function calculate(number1, number2 ,callback) {
-  let ans = number1 + number2;
-  // checking whether the callback function has been passed or not as argument
-      if(callback) {
-        callback(ans);
-      }
-}
+// function calculate(number1, number2 ,callback) {
+//   let ans = number1 + number2;
+//   // checking whether the callback function has been passed or not as argument
+//       if(callback) {
+//         callback(ans);
+//       }
+// }
 
- calculate(2, 5, function(result){
-  console.log(result);
- });
+//  calculate(2, 5, function(result){
+//   console.log(result);
+//  });
 // displayOutput(result);
+
+
+console.log('hello 1');
+setTimeout(function(){
+  console.log('hello 2');
+},1000);
+console.log('hello 3');
 // ----------------js asynchronous behaviour end-----------------
