@@ -487,31 +487,51 @@
 
 // ----------------js function closer start-----------------
 // function closer method 1 not using self invocation
-  //  const add = function(){
+  //   function add(){
   //       let count = 0;
   //        function plus(){
   //         count++;
   //         return count;
+        
   //       }
+
   //       return plus;
   //  };
-
+ 
   //  const func = add();
+  //  console.dir(func);
   //  func();
   //  func();
   //  func();
   //  console.log(func());
   // function closer method 2 using self invocation
-          const add = (function(){
-            let count = 0;
-            function plus(){
-              count++;
-              return count;
-            }
-            return plus;
-        })();
+        //   const add = (function(){
+        //     let count = 0;
+        //     function plus(){
+        //       count++;
+        //       return count;
+        //     }
+        //     return plus;
+        // })();
 
-        add();
-        add();
-        console.log(add());
+        // add();
+        // add();
+        // console.log(add());
 // ----------------js function closer end-----------------
+
+// ----------------js asynchronous behaviour start-----------------
+// js callback function start
+function displayOutput(ans){
+  console.log(ans);
+}
+function calculate(number1, number2 ,callback) {
+  let ans = number1 + number2;
+  // checking whether the callback function has been passed or not as argument
+      if(callback) {
+        displayOutput(ans);
+      }
+}
+
+ calculate(2, 5, true);
+// displayOutput(result);
+// ----------------js asynchronous behaviour end-----------------
