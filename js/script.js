@@ -665,12 +665,12 @@
 //       }
 // }
 
-function stopWorker(){
-       if(typeof w !== 'undefined'){
-        w.terminate();
-        w = undefined;
-       }
-}
+// function stopWorker(){
+//        if(typeof w !== 'undefined'){
+//         w.terminate();
+//         w = undefined;
+//        }
+// }
 
 // ----------------js web Worker API end-----------------
 
