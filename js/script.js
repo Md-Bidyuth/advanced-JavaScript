@@ -647,23 +647,23 @@
 // ----------------js asynchronous behaviour end-----------------
 
 // ----------------js web Worker API start-----------------
-let w;
+// let w;
 
-function startWorker(){
-      if(typeof Worker !== 'undefined'){
+// function startWorker(){
+//       if(typeof Worker !== 'undefined'){
 
-        if(typeof w == 'undefined'){
-            w = new Worker('./js/worker.js');
-        }
+//         if(typeof w == 'undefined'){
+//             w = new Worker('./js/worker.js');
+//         }
 
-        w.onmessage = function(event) {
-            document.getElementById('demo').innerHTML = event.data;
-            console.log(event);
-        }
-      } else {
-        alert('your browser does not support Worker API');
-      }
-}
+//         w.onmessage = function(event) {
+//             document.getElementById('demo').innerHTML = event.data;
+//             console.log(event);
+//         }
+//       } else {
+//         alert('your browser does not support Worker API');
+//       }
+// }
 
 function stopWorker(){
        if(typeof w !== 'undefined'){
