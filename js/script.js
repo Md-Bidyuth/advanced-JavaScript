@@ -900,4 +900,11 @@
 //   ...obj2
 // }
 // console.log(myObj);
+
+// rest operator :
+const getNum = (a, ...params) => {
+     console.log(a);
+     console.log(params);
+}
+getNum(1,2,3,4);
 // ----------------js modern js end-----------------
