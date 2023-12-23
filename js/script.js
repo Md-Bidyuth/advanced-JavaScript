@@ -805,9 +805,17 @@
 // console.log(result);
 
 // arr.splice() : change the original Array
-const numbers = [ 4, 5, 7, 9, 11, 13 ];
-const result = numbers.splice(2, 3, 20, 30, 40);
+// const numbers = [ 4, 5, 7, 9, 11, 13 ];
+// const result = numbers.splice(2, 3, 20, 30, 40);
 
-console.log(numbers);
+// console.log(numbers);
+// console.log(result);
+
+// arr.concat() :
+const numbers1 = [ 4, 5, 7, 9, 11, 13 ];
+const numbers2= [ 40, 50, 70, 90, 110, 130 ];
+
+const result = numbers1.concat(numbers2);
 console.log(result);
+console.log(numbers1);
 // ----------------js modern js end-----------------
