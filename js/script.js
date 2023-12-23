@@ -719,4 +719,21 @@ const thanks = document.getElementById('thanks');
  
 //   display.innerHTML = this.value;
 // })
+
+// // every normal function is constructor function 
+// function Person(name) {
+//   this.name = name;
+// }
+// // in normal function new keyword is applicable
+// const sakib = new Person('sakib');
+// console.log(sakib);
+
+
+// arrow functions are not constructor function
+const Person = (name) => {
+      this.name = name;
+}
+// new keyword is not applicable 
+// const sakib = new Person('sakib'); //it will give error
+// console.log(sakib); 
 // ----------------js modern js end-----------------
