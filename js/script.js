@@ -861,12 +861,18 @@ const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
 //   console.log(num);
 // }
 
-// object methods :
+let x = 4;
+let y = 5;
 const myObj = {
     name: 'javascript',
     age: 50,
+    x,
+    y,
 }
 console.log(Object.keys(myObj));
 console.log(Object.values(myObj));
 console.log(Object.entries(myObj));
+
+const getNum = (x = 10) => x;
+console.log(getNum(null));
 // ----------------js modern js end-----------------
