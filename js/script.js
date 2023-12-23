@@ -703,9 +703,9 @@
 // }
 
 // javaScript.printLIbraries();
-const searchInput = document.getElementById('search');
-const display = document.getElementById('result');
-const thanks = document.getElementById('thanks');
+// const searchInput = document.getElementById('search');
+// const display = document.getElementById('result');
+// const thanks = document.getElementById('thanks');
 
 // function show(){
   
@@ -746,7 +746,38 @@ const thanks = document.getElementById('thanks');
 //   console.log('i am falsy');
 // }
 // ternery operator 
-let age=22;
-const status = (age >= 20) ? 'adult' : (age < 10) ? 'child' : 'teenager';
-console.log(status);
+// let age=22;
+// const status = (age >= 20) ? 'adult' : (age < 10) ? 'child' : 'teenager';
+// console.log(status);
+
+
+// arr.find() method
+// const arr = [ 1, 2, 3, 4, 5, 6, 7 ];
+// const output = arr.find(function(currentElement, currentIndex, arr){
+//      return currentElement > 4;
+// })
+
+// console.dir(output);
+
+class Student {
+       Constructor(name, age){
+             this.name = name;
+             this.age = age;
+       }
+
+       test(param){
+        console.log('hello '+ param); 
+       }
+      
+       exampleFunction(){
+          let arr = [ 1, 2, 3, 4 ];
+          arr.find((element) => {
+                this.test(element)
+          })
+       }
+
+}
+
+const ali = new Student('ali jaber', 22);
+ali.exampleFunction();
 // ----------------js modern js end-----------------
