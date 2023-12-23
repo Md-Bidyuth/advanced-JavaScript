@@ -678,3 +678,15 @@
 
 // ----------------js DOM recap end-----------------
 
+// ----------------js modern js start-----------------
+//normal function
+// function func(){
+//   return 10;
+// }
+
+//arrow function
+
+const func = (n) => n;
+
+console.log(func(12));
+// ----------------js modern js end-----------------
