@@ -833,9 +833,31 @@
 // console.log(numbers);
 
 //arr.reduce() :
+// const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+// const result = numbers.reduce((prevValue, currValue) => {
+//         return prevValue + currValue;
+// },0)
+// console.log(result);
+
+// for loops in complex syntax:
 const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
-const result = numbers.reduce((prevValue, currValue) => {
-        return prevValue + currValue;
-},0)
-console.log(result);
+
+// let i = 0;
+// for(;;){
+//   if(i < 50){
+//     console.log(i);
+//   } else {
+//     break;
+//   }
+//   i++;
+// }
+
+const myObj = {
+    name: 'javascript',
+    age: 50,
+}
+
+for(num in numbers){
+  console.log(num);
+}
 // ----------------js modern js end-----------------
