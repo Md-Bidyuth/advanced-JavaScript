@@ -852,12 +852,21 @@ const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
 //   i++;
 // }
 
+// const myObj = {
+//     name: 'javascript',
+//     age: 50,
+// }
+
+// for(num in numbers){
+//   console.log(num);
+// }
+
+// object methods :
 const myObj = {
     name: 'javascript',
     age: 50,
 }
-
-for(num in numbers){
-  console.log(num);
-}
+console.log(Object.keys(myObj));
+console.log(Object.values(myObj));
+console.log(Object.entries(myObj));
 // ----------------js modern js end-----------------
