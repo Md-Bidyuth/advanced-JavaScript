@@ -790,12 +790,17 @@
 // console.log(output);
 
 // arr.filter() method: 
+// const numbers = [ 4, 5, 7, 9, 11, 13 ];
+// const result = numbers.filter((currentValue, index, arr) => {
+//         console.log(index);
+//         console.log(arr);
+//          return currentValue > 7;
+// })
+// console.log(numbers);
+// console.log(result); 
+
+// arr.slice() :
 const numbers = [ 4, 5, 7, 9, 11, 13 ];
-const result = numbers.filter((currentValue, index, arr) => {
-        console.log(index);
-        console.log(arr);
-         return currentValue > 7;
-})
-console.log(numbers);
+const result = numbers.slice(0, 5);
 console.log(result);
 // ----------------js modern js end-----------------
