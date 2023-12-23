@@ -840,7 +840,7 @@
 // console.log(result);
 
 // for loops in complex syntax:
-const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+// const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
 
 // let i = 0;
 // for(;;){
@@ -861,18 +861,43 @@ const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
 //   console.log(num);
 // }
 
-let x = 4;
-let y = 5;
-const myObj = {
-    name: 'javascript',
-    age: 50,
-    x,
-    y,
-}
-console.log(Object.keys(myObj));
-console.log(Object.values(myObj));
-console.log(Object.entries(myObj));
+// let x = 4;
+// let y = 5;
+// const myObj = {
+//     name: 'javascript',
+//     age: 50,
+//     x,
+//     y,
+// }
+// console.log(Object.keys(myObj));
+// console.log(Object.values(myObj));
+// console.log(Object.entries(myObj));
 
-const getNum = (x = 10) => x;
-console.log(getNum(null));
+// const getNum = (x = 10) => x;
+// console.log(getNum(null));
+
+//spread operator
+// const numbers1 = [1, 2, 3];
+// const numbers2 = [4, 5, 6];
+
+// const numbers = [...numbers1, ...numbers2];
+// console.log(numbers);
+// const arr = [...numbers1]
+// numbers1.push(7);
+// console.log(arr);
+// console.log(numbers1);
+
+// const obj1 = {
+//   name: 'ali',
+//   degree: 'BSc'
+// }
+// const obj2 = {
+//   age: 22
+// }
+
+// const myObj = {
+//   ...obj1,
+//   ...obj2
+// }
+// console.log(myObj);
 // ----------------js modern js end-----------------
