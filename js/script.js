@@ -824,11 +824,18 @@
 // console.log(result);
 
 // arr.map():
-const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
-const result = numbers.map((num) => {
-  return  num * 3;
-})
+// const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+// const result = numbers.map((num) => {
+//   return  num * 3;
+// })
 
+// console.log(result);
+// console.log(numbers);
+
+//arr.reduce() :
+const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+const result = numbers.reduce((prevValue, currValue) => {
+        return prevValue + currValue;
+},0)
 console.log(result);
-console.log(numbers);
 // ----------------js modern js end-----------------
