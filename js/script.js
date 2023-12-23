@@ -812,10 +812,14 @@
 // console.log(result);
 
 // arr.concat() :
-const numbers1 = [ 4, 5, 7, 9, 11, 13 ];
-const numbers2= [ 40, 50, 70, 90, 110, 130 ];
+// const numbers1 = [ 4, 5, 7, 9, 11, 13 ];
+// const result = numbers1.concat([ 40, 50, 70, 90, 110, 130 ]);
+// console.log(result);
+// console.log(numbers1);
 
-const result = numbers1.concat(numbers2);
-console.log(result);
+// arr.push() :
+const numbers1 = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+const result = numbers1.push(100, 200, 300, 400); //result variable holds the length of original arr
 console.log(numbers1);
+console.log(result);
 // ----------------js modern js end-----------------
