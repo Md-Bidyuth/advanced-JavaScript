@@ -782,10 +782,20 @@
 // ali.exampleFunction();
 
 // arr.findIndex() method:
-const numbers = [ 4, 5, 7, 9, 11, 13 ];
-const output = numbers.findIndex((currValue, currIndex, arr) => {
-       return (currValue > 111);
-})
+// const numbers = [ 4, 5, 7, 9, 11, 13 ];
+// const output = numbers.findIndex((currValue, currIndex, arr) => {
+//        return (currValue > 111);
+// })
 
-console.log(output);
+// console.log(output);
+
+// arr.filter() method: 
+const numbers = [ 4, 5, 7, 9, 11, 13 ];
+const result = numbers.filter((currentValue, index, arr) => {
+        console.log(index);
+        console.log(arr);
+         return currentValue > 7;
+})
+console.log(numbers);
+console.log(result);
 // ----------------js modern js end-----------------
