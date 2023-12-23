@@ -800,7 +800,14 @@
 // console.log(result); 
 
 // arr.slice() :
+// const numbers = [ 4, 5, 7, 9, 11, 13 ];
+// const result = numbers.slice(0, 5);
+// console.log(result);
+
+// arr.splice() : change the original Array
 const numbers = [ 4, 5, 7, 9, 11, 13 ];
-const result = numbers.slice(0, 5);
+const result = numbers.splice(2, 3, 20, 30, 40);
+
+console.log(numbers);
 console.log(result);
 // ----------------js modern js end-----------------
