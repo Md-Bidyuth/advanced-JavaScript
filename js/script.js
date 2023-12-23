@@ -730,9 +730,9 @@ const thanks = document.getElementById('thanks');
 
 
 // arrow functions are not constructor function
-const Person = (name) => {
-      this.name = name;
-}
+// const Person = (name) => {
+//       this.name = name;
+// }
 // new keyword is not applicable 
 // const sakib = new Person('sakib'); //it will give error
 // console.log(sakib); 
