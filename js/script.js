@@ -736,4 +736,13 @@ const thanks = document.getElementById('thanks');
 // new keyword is not applicable 
 // const sakib = new Person('sakib'); //it will give error
 // console.log(sakib); 
+
+// falsy values are : explicitly false, 0, null, undefined, "", NaN
+
+const x = undefined;
+if(x){
+  console.log('i am truthy');
+} else {
+  console.log('i am falsy');
+}
 // ----------------js modern js end-----------------
