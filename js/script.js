@@ -686,7 +686,22 @@
 
 //arrow function
 
-const func = (n) => n;
+// const func = (n) => n;
 
-console.log(func(12));
+// console.log(func(12));
+const javaScript = {
+     name: 'JavaScript',
+     libraries: ['React', 'Angular', 'Vue'],
+     printLIbraries: function(){
+      // console.log(this);
+         this.libraries.forEach((library) => {
+              //  const self = javaScript;
+              //  arrow func is not concern of 'this' keyword
+              console.log(`${this.name} is the parent of ${library}`);
+         })
+     }
+}
+
+javaScript.printLIbraries();
+
 // ----------------js modern js end-----------------
