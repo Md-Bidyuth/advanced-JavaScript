@@ -739,10 +739,14 @@ const thanks = document.getElementById('thanks');
 
 // falsy values are : explicitly false, 0, null, undefined, "", NaN
 
-const x = undefined;
-if(x){
-  console.log('i am truthy');
-} else {
-  console.log('i am falsy');
-}
+// const x = undefined;
+// if(x){
+//   console.log('i am truthy');
+// } else {
+//   console.log('i am falsy');
+// }
+// ternery operator 
+let age=22;
+const status = (age >= 20) ? 'adult' : (age < 10) ? 'child' : 'teenager';
+console.log(status);
 // ----------------js modern js end-----------------
