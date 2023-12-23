@@ -759,25 +759,33 @@
 
 // console.dir(output);
 
-class Student {
-       Constructor(name, age){
-             this.name = name;
-             this.age = age;
-       }
+// class Student {
+//        Constructor(name, age){
+//              this.name = name;
+//              this.age = age;
+//        }
 
-       test(param){
-        console.log('hello '+ param); 
-       }
+//        test(param){
+//         console.log('hello '+ param); 
+//        }
       
-       exampleFunction(){
-          let arr = [ 1, 2, 3, 4 ];
-          arr.find((element) => {
-                this.test(element)
-          })
-       }
+//        exampleFunction(){
+//           let arr = [ 1, 2, 3, 4 ];
+//           arr.find((element) => {
+//                 this.test(element)
+//           })
+//        }
 
-}
+// }
 
-const ali = new Student('ali jaber', 22);
-ali.exampleFunction();
+// const ali = new Student('ali jaber', 22);
+// ali.exampleFunction();
+
+// arr.findIndex() method:
+const numbers = [ 4, 5, 7, 9, 11, 13 ];
+const output = numbers.findIndex((currValue, currIndex, arr) => {
+       return (currValue > 111);
+})
+
+console.log(output);
 // ----------------js modern js end-----------------
