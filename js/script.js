@@ -818,8 +818,17 @@
 // console.log(numbers1);
 
 // arr.push() :
-const numbers1 = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
-const result = numbers1.push(100, 200, 300, 400); //result variable holds the length of original arr
-console.log(numbers1);
+// const numbers1 = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+// const result = numbers1.push(100, 200, 300, 400); //result variable holds the length of original arr
+// console.log(numbers1);
+// console.log(result);
+
+// arr.map():
+const numbers = [ 4, 5, 7, 8, 9, 10, 11, 13 ];
+const result = numbers.map((num) => {
+  return  num * 3;
+})
+
 console.log(result);
+console.log(numbers);
 // ----------------js modern js end-----------------
