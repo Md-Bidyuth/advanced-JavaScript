@@ -689,19 +689,34 @@
 // const func = (n) => n;
 
 // console.log(func(12));
-const javaScript = {
-     name: 'JavaScript',
-     libraries: ['React', 'Angular', 'Vue'],
-     printLIbraries: function(){
-      // console.log(this);
-         this.libraries.forEach((library) => {
-              //  const self = javaScript;
-              //  arrow func is not concern of 'this' keyword
-              console.log(`${this.name} is the parent of ${library}`);
-         })
-     }
-}
+// const javaScript = {
+//      name: 'JavaScript',
+//      libraries: ['React', 'Angular', 'Vue'],
+//      printLIbraries: function(){
+//       // console.log(this);
+//          this.libraries.forEach((library) => {
+//               //  const self = javaScript;
+//               //  arrow func is not concern of 'this' keyword
+//               console.log(`${this.name} is the parent of ${library}`);
+//          })
+//      }
+// }
 
-javaScript.printLIbraries();
+// javaScript.printLIbraries();
+const searchInput = document.getElementById('search');
+const display = document.getElementById('result');
+const thanks = document.getElementById('thanks');
 
+// function show(){
+  
+//      display.innerHTML = this.value;
+//      setTimeout(function(){
+//       thanks.innerHTML = `you have typed ${this.value}`;
+//      },1000)
+// }
+
+// searchInput.addEventListener('keyup',function() {
+ 
+//   display.innerHTML = this.value;
+// })
 // ----------------js modern js end-----------------
