@@ -1098,8 +1098,48 @@
 // console.log(splicedArr);
 
 // immutable arr.with() 
-const arr = [1, 2, 3, 4, 5, 6];
-const result = arr.with(3, 300);
+// const arr = [1, 2, 3, 4, 5, 6];
+// const result = arr.with(3, 300);
+// console.log(arr);
+// console.log(result);
+
+// numeric immuted sort method
+// const arr = [22, 3, 7, 15, 1, 12];
+
+// const sortedArr = arr.toSorted((a, b) => a - b)
+// console.log(sortedArr);
+// console.log(arr);
+
+// sort arr of object by toSorted() :
+const arr = [
+        {
+          name: 'Volvo',
+          price: 10000
+        },
+        {
+          name: 'BMW',
+          price: 5000
+        },
+        {
+          name: 'Saab',
+          price: 7000
+        }
+];
+// const sortedArr = arr.toSorted((a, b) => {
+//         return a.price - b.price;
+// })
+const sortedArr = arr.toSorted((a, b) => {
+        const x = a.name.toLowerCase();
+        const y = b.name.toLowerCase();
+        if(x < y) {
+          return -1;
+        } else if (x > y) {
+          return 1;
+        } else {
+          return 0;
+        }
+});
+
+console.log(sortedArr);
 console.log(arr);
-console.log(result);
 // ----------------js modern js end-----------------
