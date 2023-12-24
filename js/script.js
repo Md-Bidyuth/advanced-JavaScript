@@ -1128,18 +1128,18 @@ const arr = [
 // const sortedArr = arr.toSorted((a, b) => {
 //         return a.price - b.price;
 // })
-const sortedArr = arr.toSorted((a, b) => {
-        const x = a.name.toLowerCase();
-        const y = b.name.toLowerCase();
-        if(x < y) {
-          return -1;
-        } else if (x > y) {
-          return 1;
-        } else {
-          return 0;
-        }
-});
+// const sortedArr = arr.toSorted((a, b) => {
+//         const x = a.name.toLowerCase();
+//         const y = b.name.toLowerCase();
+//         if(x < y) {
+//           return -1;
+//         } else if (x > y) {
+//           return 1;
+//         } else {
+//           return 0;
+//         }
+// });
 
-console.log(sortedArr);
-console.log(arr);
+// console.log(sortedArr);
+// console.log(arr);
 // ----------------js modern js end-----------------
