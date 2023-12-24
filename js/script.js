@@ -938,8 +938,14 @@
 // console.log(a, b);
 
 // value swap destructuring
-let a = 4;
-let b = 5;
-[b, a]=[a, b]
-console.log(a, b);
+// let a = 4;
+// let b = 5;
+// [b, a]=[a, b]
+// console.log(a, b);
+
+
+// es6 export import
+import externalFunc, {pi as externalPi, a as externalA} from './worker.js'
+console.log( externalPi, externalA);
+externalFunc();
 // ----------------js modern js end-----------------
