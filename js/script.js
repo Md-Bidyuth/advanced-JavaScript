@@ -1023,10 +1023,69 @@
 // console.log(Person.prototype.method());
 // console.log(person1.method());
 
-//es6 copyWithin() method : 
-const arr = ['js', 'python', 'java', 'c++', 'c#', 'c'];
-const x = arr.copyWithin(-1, -5, -2);
-console.log(arr);
-console.log(x);
+// es6 copyWithin() method : 
+// const arr = ['js', 'python', 'java', 'c++', 'c#', 'c'];
+// const x = arr.copyWithin(-1, -5, -2);
+// console.log(arr);
+// console.log(x);
+
+// global vs window object :
+// global.setTimeout(() => {
+//      console.log('hello');
+// }, 3000);
+
+// window.setTimeout(() => {
+//      console.log('hello');
+// }, 3000);
+
+
+// globalThis.setTimeout(() => {
+//      console.log('hello');
+// }, 3000);
+
+// BigInt datatype
+// let largestNumber = Number.MAX_SAFE_INTEGER;
+// largestNumber = largestNumber + 1;
+// largestNumber = BigInt(largestNumber) + 1n;
+// console.log(largestNumber);
+
+// optional chaining in arr
+// let arr = ['red', 'green', 'black'];
+// arr = null;
+
+// console.log(arr?.[1]);
+
+// nullish coalescing operator
+// let language;
+// language =  NaN;
+// console.log(language ?? 'javaScript');
+// console.log(language || 'javaScript');
+
+// dynamic import : method 1
+
+// async function a (){
+//   const {add, remove} = await import('./worker.js');
+//   // const {remove} = await import('./worker.js');
+//        add();
+//        remove();
+// };
+// a();
+
+// dynamic import : method 2
+
+// (async function(){
+//   const {add, remove} = await import('./worker.js');
+//   // const {remove} = await import('./worker.js');
+//        add();
+//        remove();
+// })();
+
+// dynamic import : method 3
+// import('./worker.js')
+//          .then(({add, remove}) => {
+//           add();
+//           remove();
+//          })
+
 
 // ----------------js modern js end-----------------
