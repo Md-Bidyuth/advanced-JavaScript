@@ -1022,4 +1022,11 @@
 // console.log(person1);
 // console.log(Person.prototype.method());
 // console.log(person1.method());
+
+//es6 copyWithin() method : 
+const arr = ['js', 'python', 'java', 'c++', 'c#', 'c'];
+const x = arr.copyWithin(-1, -5, -2);
+console.log(arr);
+console.log(x);
+
 // ----------------js modern js end-----------------
