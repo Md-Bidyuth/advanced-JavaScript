@@ -952,15 +952,74 @@
 
 // tagged template literal
 
-const player1 = 'Riyad';
-const player2 = 'Mushfiq';
-function addMr(strings, ...values){
-     console.log(strings); //strings = [ 'we have ', ' and ', ' in bd cricket team' ];
-     console.log(values); //values = [ 'Riyad', 'Mushfiq' ];
-     const modifiedStr = strings.reduce((prev, curr) => {
-           return prev + curr + (values.length ? 'Mr ' + values.shift() : "");
-     },"");
-     return modifiedStr;
-}
-console.log(addMr`we have ${player1} and ${player2} in bd cricket team`);
+// const player1 = 'Riyad';
+// const player2 = 'Mushfiq';
+// function addMr(strings, ...values){
+//      console.log(strings); //strings = [ 'we have ', ' and ', ' in bd cricket team' ];
+//      console.log(values); //values = [ 'Riyad', 'Mushfiq' ];
+//      const modifiedStr = strings.reduce((prev, curr) => {
+//            return prev + curr + (values.length ? 'Mr ' + values.shift() : "");
+//      },"");
+//      return modifiedStr;
+// }
+// console.log(addMr`we have ${player1} and ${player2} in bd cricket team`);
+
+// es6 set data structure
+
+// let myArr = [1, 2, 3, 4, 5, 6];
+// let mySet = new Set();
+// let obj = {
+//      a: 2,
+//      b: 3
+//   }
+
+
+// mySet.add(2);
+// mySet.add(3);
+// mySet.add(14).add(15).add(16).add('bangladesh').delete(15);
+// mySet.add(obj)
+
+// mySet.add(obj)
+// let newArr = [...mySet]
+
+// console.log(mySet.size);
+// console.log(mySet);
+// console.log(newArr);
+// let arr1 = [1, 2, 3, 3, 4, 5];
+// let arr2 = [3, 4, 5, 6, 7];
+// console.log([...new Set(arr1)]);
+
+// console.log(new Set([...arr1, ...arr2]));
+// const intersectionOfSet = new Set(arr1.filter((element) => new Set(arr2).has(element)));
+// console.log(intersectionOfSet);
+
+// console.log(Array.from(intersectionOfSet)); // converting arr from a set
+// const differenceOfSet = new Set(new Set(arr1.filter((element) => !new Set(arr2).has(element))));
+// console.log(differenceOfSet);
+
+
+//weakSet
+// let wkSet = new WeakSet();
+//    wkSet.add([{a:1, b: 2},{a:1, b: 2}])
+//   //  wkSet.add({a:1, b: 2})
+
+// console.log(wkSet);
+// let wkSet = new WeakSet();
+// class Person{
+//      constructor(){
+//          wkSet.add(this);
+//      }
+//      method(){
+//       if(!wkSet.has(this)){
+//         throw new Error('invalid func call');
+        
+//       }  else {
+//         return 'hello world';
+//      }
+// }
+// }
+// const person1 = new Person();
+// console.log(person1);
+// console.log(Person.prototype.method());
+// console.log(person1.method());
 // ----------------js modern js end-----------------
