@@ -902,9 +902,44 @@
 // console.log(myObj);
 
 // rest operator :
-const getNum = (a, ...params) => {
-     console.log(a);
-     console.log(params);
-}
-getNum(1,2,3,4);
+// const getNum = (a, ...params) => {
+//      console.log(a);
+//      console.log(params);
+// }
+// getNum(1,2,3,4);
+
+
+// obj destructuring
+// const obj = {
+//   name: 'ali',
+//   age: 22,
+//   home: {
+//     dist: 'tangail',
+//     distance: {
+//       fromDhaka: '145 km',
+//       fromJamalpur: '70 km',
+//       timeNeeded: {
+//         byBus: '7 hours',
+//         byTrain: '6 hours'
+//       }
+//     }
+//   }
+// }
+// //destructuring of nested property of obj
+// const { home : { distance: { timeNeeded: { byBus: onHighWay } = {} } } } = obj;
+// console.log(onHighWay);
+
+// array destructuring
+// const arr = [ 1, 2, 3, 4, 5, 6 ];
+// const [,,a,, b]  = arr; 
+// const arr = [ 1, 2, 3, [10, 20, 30, 40], 4, 5, 6 ];
+// const [,,,[,a,,b]] = arr;
+
+// console.log(a, b);
+
+// value swap destructuring
+let a = 4;
+let b = 5;
+[b, a]=[a, b]
+console.log(a, b);
 // ----------------js modern js end-----------------
