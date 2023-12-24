@@ -945,7 +945,22 @@
 
 
 // es6 export import
-import externalFunc, {pi as externalPi, a as externalA} from './worker.js'
-console.log( externalPi, externalA);
-externalFunc();
+// import externalFunc, {pi as externalPi, a as externalA} from './worker.js'
+// console.log( externalPi, externalA);
+// externalFunc();
+
+
+// tagged template literal
+
+const player1 = 'Riyad';
+const player2 = 'Mushfiq';
+function addMr(strings, ...values){
+     console.log(strings); //strings = [ 'we have ', ' and ', ' in bd cricket team' ];
+     console.log(values); //values = [ 'Riyad', 'Mushfiq' ];
+     const modifiedStr = strings.reduce((prev, curr) => {
+           return prev + curr + (values.length ? 'Mr ' + values.shift() : "");
+     },"");
+     return modifiedStr;
+}
+console.log(addMr`we have ${player1} and ${player2} in bd cricket team`);
 // ----------------js modern js end-----------------
