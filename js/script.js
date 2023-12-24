@@ -1087,5 +1087,19 @@
 //           remove();
 //          })
 
+// immutable arr.toReversed() : ES14
+// const arr = [1, 2, 3, 4, 5, 6];
+// const reversedArr = arr.toReversed(); //instead of reverse()
 
+// // immutable arr.toSpliced() 
+// const arr = [1, 2, 3, 4, 5, 6];
+// const splicedArr = arr.toSpliced(2, 2, 100, 200, 300, 400);
+// console.log(arr);
+// console.log(splicedArr);
+
+// immutable arr.with() 
+const arr = [1, 2, 3, 4, 5, 6];
+const result = arr.with(3, 300);
+console.log(arr);
+console.log(result);
 // ----------------js modern js end-----------------
