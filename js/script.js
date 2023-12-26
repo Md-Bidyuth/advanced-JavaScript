@@ -1143,3 +1143,11 @@ const arr = [
 // console.log(sortedArr);
 // console.log(arr);
 // ----------------js modern js end-----------------
+
+//----------------think in js way start-----------------
+var x = 10;
+var y = 15;
+//now x and y are the property of window object
+console.log(window.x);
+console.log(window.y);
+//----------------think in js way end-----------------
