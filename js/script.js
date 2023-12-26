@@ -1187,5 +1187,7 @@ for(let i = 0; i < 3; i++){
   setTimeout(() => {
     console.log(i);
   },2000);
+  console.log(i);
 }
+
 //----------------think in js way end----------------- 
