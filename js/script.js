@@ -1145,9 +1145,23 @@ const arr = [
 // ----------------js modern js end-----------------
 
 //----------------think in js way start-----------------
-var x = 10;
-var y = 15;
-//now x and y are the property of window object
-console.log(window.x);
-console.log(window.y);
-//----------------think in js way end-----------------
+// var x = 10;
+// let y = 15;
+// //now x and y are the property of window object
+// console.log(window.x);
+// console.log(window.y); // it will give undefined because of let variable
+
+// closure : 
+var num1 = 10;
+
+function printNum(){
+     let num2 = 5;
+     let num3 = 6;
+     return function(){
+      return num2;
+     }
+}
+const func = printNum();
+console.log(func());
+console.dir(func)
+//----------------think in js way end----------------- 
