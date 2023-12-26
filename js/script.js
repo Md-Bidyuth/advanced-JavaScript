@@ -1111,20 +1111,20 @@
 // console.log(arr);
 
 // sort arr of object by toSorted() :
-const arr = [
-        {
-          name: 'Volvo',
-          price: 10000
-        },
-        {
-          name: 'BMW',
-          price: 5000
-        },
-        {
-          name: 'Saab',
-          price: 7000
-        }
-];
+// const arr = [
+//         {
+//           name: 'Volvo',
+//           price: 10000
+//         },
+//         {
+//           name: 'BMW',
+//           price: 5000
+//         },
+//         {
+//           name: 'Saab',
+//           price: 7000
+//         }
+// ];
 // const sortedArr = arr.toSorted((a, b) => {
 //         return a.price - b.price;
 // })
@@ -1152,16 +1152,33 @@ const arr = [
 // console.log(window.y); // it will give undefined because of let variable
 
 // closure : 
-var num1 = 10;
+// let num1 = 10;
 
-function printNum(){
-     let num2 = 5;
-     let num3 = 6;
-     return function(){
-      return num2;
-     }
+// function printNum(){
+//      let num2 = 5;
+//      return function(){
+//       return num2;
+//      }
+// }
+// closue : example 2
+function stopWatch(){
+    var startTime = Date.now();
+
+    function getDelay(){
+       console.log(Date.now() - startTime);
+    }
+    return getDelay;
 }
-const func = printNum();
-console.log(func());
-console.dir(func)
+
+var timer = stopWatch();
+
+for(var i = 0; i < 1000000; i++){
+     Math.random() * 1000000000;
+}
+
+ timer();
+ timer();
+ timer();
+ timer = null; // terminate timer function
+ timer(); // now this empty
 //----------------think in js way end----------------- 
