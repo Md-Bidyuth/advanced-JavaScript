@@ -1161,24 +1161,31 @@
 //      }
 // }
 // closue : example 2
-function stopWatch(){
-    var startTime = Date.now();
+// function stopWatch(){
+//     var startTime = Date.now();
 
-    function getDelay(){
-       console.log(Date.now() - startTime);
-    }
-    return getDelay;
+//     function getDelay(){
+//        console.log(Date.now() - startTime);
+//     }
+//     return getDelay;
+// }
+
+// var timer = stopWatch();
+
+// for(var i = 0; i < 1000000; i++){
+//      Math.random() * 1000000000;
+// }
+
+//  timer();
+//  timer();
+//  timer();
+//  timer = null; // terminate timer function
+//  timer(); // now this empty
+
+for(let i = 0; i < 3; i++){
+
+  setTimeout(() => {
+    console.log(i);
+  },2000);
 }
-
-var timer = stopWatch();
-
-for(var i = 0; i < 1000000; i++){
-     Math.random() * 1000000000;
-}
-
- timer();
- timer();
- timer();
- timer = null; // terminate timer function
- timer(); // now this empty
 //----------------think in js way end----------------- 
