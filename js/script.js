@@ -1181,13 +1181,13 @@
 //  timer();
 //  timer = null; // terminate timer function
 //  timer(); // now this empty
-
-for(let i = 0; i < 3; i++){
+var i;
+for( i = 0; i < 3; i++){
 
   setTimeout(() => {
     console.log(i);
   },2000);
-  console.log(i);
+  // console.log(i);
 }
 
 //----------------think in js way end----------------- 
