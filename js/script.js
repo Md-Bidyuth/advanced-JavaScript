@@ -1181,7 +1181,7 @@
 //  timer();
 //  timer = null; // terminate timer function
 //  timer(); // now this empty
-var i;
+let i;
 for( i = 0; i < 3; i++){
 
   setTimeout(() => {
